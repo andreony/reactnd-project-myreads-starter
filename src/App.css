@@ -196,3 +196,16 @@ button:active {
   text-align: center;
   font-size: 0.8em;
 }
+
+.query-not-found{
+  display: flex;
+  max-width: 30%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-left: solid 2px darkorange;
+  padding: 2px 10px;
+}
+.hide{
+  display: none;
+}
