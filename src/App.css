@@ -198,14 +198,31 @@ button:active {
 }
 
 .query-not-found{
+  position: relative;
   display: flex;
-  max-width: 30%;
+  align-items: center;
+  flex-flow: row wrap;
+  min-height: 65px;
   margin: auto;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-left: solid 2px darkorange;
-  padding: 2px 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 4px 16px;
+  padding-left: 75px;
+  font-size: 1.3em;
 }
+.query-not-found::before{
+  content:'';
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  height: 50px;
+  width: 50px;
+  background-image: url('./icons/warning-info.svg');
+}
+
 .hide{
   display: none;
 }

@@ -27,12 +27,7 @@ class BooksApp extends React.Component {
   componentDidMount(){
     BooksAPI.getAll()
       .then((books) => {
-        this.setState( (prevState) => ({
-          /* shelves: prevState.shelves.map( (shelf) =>{
-            shelf.books = books.filter((book) =>{
-             return book.shelf === shelf.value
-            })
-          })  */
+        this.setState( () => ({
           books
         }))
       })    
