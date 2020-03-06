@@ -22,7 +22,7 @@ class SearchBook extends Component{
 
 	render(){
 		const { query, books } = this.state
-		const { handleShelfChange } = this.props
+		const { handleShelfChange, myBookList } = this.props
 		let showingBooks
 		let notFound = 'hide'
 		try{
@@ -67,7 +67,14 @@ class SearchBook extends Component{
 									<div className="book-top">
 										<div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.thumbnail}")` }}></div>
 										<div className="book-shelf-changer">
-											<select value={book.shelf} onChange={ (e) => (handleShelfChange(book, e.target.value))}>
+											<select 
+												value={myBookList.some( myBook => myBook.id === book.id) ? (
+														myBookList.filter( (myBook) => myBook.id === book.id )[0].shelf
+														) : (
+																'none'
+												)} 
+												onChange={ (e) => (handleShelfChange(book, e.target.value))}
+											>
 												<option value="move" disabled>Move to...</option>
 												<option value="currentlyReading">Currently Reading</option>
 												<option value="wantToRead">Want to Read</option>
