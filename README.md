@@ -1,14 +1,20 @@
 
 # MyReads Project
 
+  The MyReads Application stands out as a personal digital library, comprised of several shelves representing the state of each book in your library.
+  The user has the option to search books through Books API using the search feature. This returns up to 20 books matching your query
   
+## Table of Contents
 
-The app was forked from the [starter template repository](https://github.com/andreony/reactnd-project-myreads-starter) and was changes as required to perform all tasks listed inside the rubric for the MyReads Project.
-  
+- [Table of Contents](#table-of-contents)
+- [Intro](#intro)
+- [Instructions](#instructions)
+- [Application](#application )
+- [Search Books](#search)
+- [Backend Server](#backend-server)
+- [To Do(s)](#to-dos)
 
-## TL;DR
-
-  
+## Instructions
 
 Launch application :  
 
@@ -17,29 +23,22 @@ Launch application :
 * start the development server with `npm start`
   
 
-## What's been added 
+## Application 
+Gives the user the option to and/change the current shelf each book sits on from  a list of three:
 
-```
-├── App.js 
+ - Currently Reading
+ - Want to Read 
+ - Read
 
- -  added API calls to backend and state update handlers
- -  added react router logic to allow rotes and enable the back button 
-
-├── Search.js
-
- - This is a new component which gives the option to search and add new books
-```
-
-
-  
+Each book can be changed between shelves, or removed from the library by selecting the **'None'** shelf.
+ 
 
 ## Backend Server
 
   
 
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
-
-  
+. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
+ 
 
 *  [`getAll`](#getall)
 
@@ -67,7 +66,7 @@ getAll()
 
 * Returns a Promise which resolves to a JSON object containing a collection of book objects.
 
-* This collection represents the books currently in the bookshelves in your app.
+* This collection represents the books currently in the bookshelves.
 
   
 
@@ -95,7 +94,7 @@ update(book, shelf)
 
   
 
-### `search`
+### `search` 
 
   
 
@@ -115,14 +114,7 @@ search(query)
 
 * Returns a Promise which resolves to a JSON object containing a collection of a maximum of 20 book objects.
 
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
-
 ## To Do(s)
 
  - Add a bulk book shelf update
 
-## Important
-
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
-
- 

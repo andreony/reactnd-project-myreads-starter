@@ -77,11 +77,16 @@ class BooksApp extends React.Component {
                                   <div className="book-top">
                                     <div 
                                       className="book-cover" 
-                                      style={{ 
-                                        width: 128, 
-                                        height: 193, 
-                                        backgroundImage: `url("${book.imageLinks.thumbnail}")` 
-                                      }}
+                                      style={book.imageLinks ? ({ 
+                                          width: 128, 
+                                          height: 193, 
+                                          backgroundImage: `url("${book.imageLinks.thumbnail}")` 
+                                        }):({
+                                          width: 128, 
+                                          height: 193, 
+                                          backgroundImage: 'url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbookshoptalk.files.wordpress.com%2F2011%2F10%2Fgeneric-book-cover.jpg%3Fw%3D190&f=1&nofb=1")'
+                                        })
+                                      }
                                     ></div>
                                     <div className="book-shelf-changer">
                                       <select 
